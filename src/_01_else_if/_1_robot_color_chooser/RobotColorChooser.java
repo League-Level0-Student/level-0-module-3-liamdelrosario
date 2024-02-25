@@ -13,10 +13,16 @@ public class RobotColorChooser {
     	Robot rob = new Robot();
     	rob.penDown();
     	rob.setPenWidth(10);
+    	
     	String input=JOptionPane.showInputDialog("what color do you want in this list. Red,Blue,Green,hot pink and navy purple");
     	 if(input.equals("red")) {
     	rob.setPenColor(100, 0, 0);
-    		 
+    	rob.setSpeed(1000);
+    	int count = 0;
+         while ( count < 4 ){
+     	rob.move(300);
+     	rob.turn(90);       
+     	count += 1;
     	}
 	    //2. Make the robot draw a shape (this will take more than one line of code)		
 		//3. Set the pen width to 10
